@@ -9,7 +9,7 @@ colorMap.ts	as |const 객체	|39|
 
 ## 2. 성능 비교
 ### 1. 빌드 크기 비교 (모든 이넘 사용 가정)
-
+> 테스트한 코드는 [여기](https://github.com/KumJungMin/enum-const-performance/tree/build-test)에 있습니다.
 ```
 colorMap.ts (as const 방식): 866B
 ConstEnum.ts (const enum): 1.51KB
@@ -27,6 +27,7 @@ NormalEnum.ts (일반 enum): 1.55KB
 <br/>
 
 ### 2. 호출 시간 비교
+> 테스트한 코드는 [여기](https://github.com/KumJungMin/enum-const-performance/tree/running-test)에 있습니다.
 #### 2-1. 하나의 이넘값만 반복 호출 (1,000,000번 × 10회 반복)
 
 ```
