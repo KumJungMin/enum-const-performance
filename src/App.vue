@@ -7,6 +7,10 @@ import { getConstEnumValue } from './enums/ConstEnum';
 import { getAsConstValue } from './constants/colorMap';
 
 
+const normalEnumValue = getNormalEnumValue();
+const constEnumValue = getConstEnumValue();
+const asConstValue = getAsConstValue();
+
 const normalTime = benchmarkEnum(getNormalEnumValue);
 const constTime = benchmarkEnum(getConstEnumValue);
 const asConstTime = benchmarkEnum(getAsConstValue);
@@ -20,8 +24,8 @@ console.log('as const time:', asConstTime);
 <template>
   <div>
     <h2>Enum 테스트 결과</h2>
-    <p>NormalEnum: {{ NormalEnum.Blue }}</p>
-    <p>ConstEnum: {{ ConstEnum.Blue }}</p>
-    <p>as const: {{ colorMap.blue }}</p>
+    <p>NormalEnum: {{ normalEnumValue }}</p>
+    <p>ConstEnum: {{ constEnumValue }}</p>
+    <p>as const: {{ asConstValue }}</p>
   </div>
 </template>
