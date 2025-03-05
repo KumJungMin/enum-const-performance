@@ -3,3 +3,7 @@ export enum NormalEnum {
   Green,
   Blue,
 }
+
+export function getNormalEnumValue(): number {
+  return NormalEnum.Red;
+}

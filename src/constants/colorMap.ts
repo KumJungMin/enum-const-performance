@@ -3,3 +3,7 @@ export const colorMap = {
   green: "GREEN",
   blue: "BLUE",
 } as const;
+
+export function getAsConstValue(): string {
+  return colorMap.red;
+}

@@ -1,14 +1,19 @@
 
 
 <script lang="ts" setup>
-import { NormalEnum } from './enums/NormalEnum';
-import { ConstEnum } from './enums/ConstEnum';
-import { colorMap } from './constants/colorMap';
+import { benchmarkEnum } from './utils/benchmark';
+import { getNormalEnumValue } from './enums/NormalEnum';
+import { getConstEnumValue } from './enums/ConstEnum';
+import { getAsConstValue } from './constants/colorMap';
 
 
-console.log('NormalEnum:', NormalEnum.Blue);
-console.log('ConstEnum:', ConstEnum.Blue);
-console.log('as const:', colorMap.blue);
+const normalTime = benchmarkEnum(getNormalEnumValue);
+const constTime = benchmarkEnum(getConstEnumValue);
+const asConstTime = benchmarkEnum(getAsConstValue);
+
+console.log('NormalEnum time:', normalTime);
+console.log('ConstEnum time:', constTime);
+console.log('as const time:', asConstTime);
 </script>
 
 

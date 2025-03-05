@@ -3,3 +3,7 @@ export const enum ConstEnum {
   Green,
   Blue,
 }
+
+export function getConstEnumValue(): number {
+  return ConstEnum.Red;
+}
