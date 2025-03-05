@@ -39,3 +39,11 @@ export const enum ConstEnum {
   DarkSlateGray = '#2F4F4F',
   LimeGreen = '#32CD32',
 }
+
+export function getConstEnumValues() {
+  return Object.values(ConstEnum).filter((value) => typeof value === 'string') as string[];
+}
+
+export function getConstColorMapValue() {
+  return ConstEnum.Red;
+}

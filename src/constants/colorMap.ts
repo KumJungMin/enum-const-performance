@@ -39,3 +39,11 @@ export const colorMap = {
   DarkSlateGray: '#2F4F4F',
   LimeGreen: '#32CD32',
 } as const;
+
+export function getColorMapValues() {
+  return Object.values(colorMap) as string[];
+}
+
+export function getColorMapValue() {
+  return colorMap.Red;
+}

@@ -39,3 +39,12 @@ export enum NormalEnum {
   DarkSlateGray = '#2F4F4F',
   LimeGreen = '#32CD32',
 }
+
+
+export function getNormalEnumValues() {
+  return Object.values(NormalEnum).filter((value) => typeof value === 'string') as string[];
+}
+
+export function getNormalColorMapValue() {
+  return NormalEnum.Red;
+}
