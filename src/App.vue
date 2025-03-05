@@ -1,7 +1,7 @@
 
 
 <script lang="ts" setup>
-import { benchmarkEnum } from './utils/benchmark';
+import { measureEnumPerformance } from './utils/benchmark';
 import { getNormalEnumValue } from './enums/NormalEnum';
 import { getConstEnumValue } from './enums/ConstEnum';
 import { getAsConstValue } from './constants/colorMap';
@@ -11,13 +11,10 @@ const normalEnumValue = getNormalEnumValue();
 const constEnumValue = getConstEnumValue();
 const asConstValue = getAsConstValue();
 
-const normalTime = benchmarkEnum(getNormalEnumValue);
-const constTime = benchmarkEnum(getConstEnumValue);
-const asConstTime = benchmarkEnum(getAsConstValue);
-
-console.log('NormalEnum time:', normalTime);
-console.log('ConstEnum time:', constTime);
-console.log('as const time:', asConstTime);
+// 각각을 측정할 때, 주석을 하나씩만 풀어서 실행!
+// measureEnumPerformance(getNormalEnumValue, 1_000_000, 10, "NormalEnum");
+// measureEnumPerformance(getConstEnumValue, 1_000_000, 10, "ConstEnum");
+measureEnumPerformance(getAsConstValue, 1_000_000, 10, "as const");
 </script>
 
 
