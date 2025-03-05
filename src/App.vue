@@ -1,30 +1,22 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+
+
+<script lang="ts" setup>
+import { NormalEnum } from './enums/NormalEnum';
+import { ConstEnum } from './enums/ConstEnum';
+import { colorMap } from './constants/colorMap';
+
+
+console.log('NormalEnum:', NormalEnum.Blue);
+console.log('ConstEnum:', ConstEnum.Blue);
+console.log('as const:', colorMap.blue);
 </script>
+
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <h2>Enum 테스트 결과</h2>
+    <p>NormalEnum: {{ NormalEnum.Blue }}</p>
+    <p>ConstEnum: {{ ConstEnum.Blue }}</p>
+    <p>as const: {{ colorMap.blue }}</p>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
